@@ -31,10 +31,10 @@ public class MonthData {
         for (int i = 0; i < days.length; i++) { // Поиск лучшей серии по выполнению цели
             if (days[i] > goalByStepsPerDay) {
                 currentSeries = currentSeries + 1; // Прибавление дня в серию при выполнении цели
-            } else {
                 if (finalSeries < currentSeries) {
                     finalSeries = currentSeries; // Присваивание finalSeries макс значения
                 }
+            } else {
                 currentSeries = 0; // Сброс серии при невыполнении цели
             }
         }

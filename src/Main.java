@@ -3,7 +3,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in); // Создание нового экземпляра
         StepTracker stepTracker = new StepTracker(scanner);
-        MonthData monthData = new MonthData();
         while (true) {
             printMenu();
 
