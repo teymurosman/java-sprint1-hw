@@ -9,11 +9,11 @@ public class Main {
 
             int i = scanner.nextInt();
             if (i == 1) {
-                stepTracker.addNewNumberStepsPerDay();
+                stepTracker.addNewNumberStepsPerDay(); // Ввод шагов за определённый день и месяц
             } else if (i == 2) {
-                stepTracker.changeStepGoal();
+                stepTracker.changeStepGoal(); // Изменение цели шагов за день
             } else if (i == 3) {
-                stepTracker.printStatistic();
+                stepTracker.printStatistic(); // Вывод статистики за месяц
             } else if (i == 0) {
                 System.out.println("Выход из приложения");
                 break;

@@ -18,16 +18,19 @@ public class StepTracker {
         System.out.println("Введите номер месяца");
         int month = scanner.nextInt();
         if (month < 1 || month > 12) {
+            System.out.println("Некорректный номер месяца. Введите номер от 1 до 12");
             return;
         }
-        System.out.println("Введите день от 1 до 30 (включительно)");
+        System.out.println("Введите день");
         int day = scanner.nextInt();
         if (day < 1 || day > 30) {
+            System.out.println("Некорректный номер дня. Введите число от 1 до 30");
             return;
         }
         System.out.println("Введите количество шагов");
         int steps = scanner.nextInt();
         if (steps < 1) {
+            System.out.println("Некорректное количество шагов. Введите число большее 0");
             return;
         }
         MonthData monthData =  monthToData[month - 1]; // Получение соответствующего объекта MonthData из массива
@@ -45,15 +48,16 @@ public class StepTracker {
     }
 
     void printStatistic() {
-        System.out.println("Выберите месяц от 1 до 12");
+        System.out.println("Выберите месяц");
         int month = scanner.nextInt();
         if (month < 1 || month > 12) {
-            System.out.println("Введён некорректный номер месяца");
+            System.out.println("Некорректный номер месяца. Введите число от 1 до 12");
             return;
         }
         MonthData monthData = monthToData[month - 1];
         int sumSteps = monthData.sumStepsFromMonth();
         monthData.printDaysAndStepsFromMonth();
+        // Вывод статистики
         System.out.println("Общее количество шагов за месяц: " + sumSteps);
         System.out.println("Максимальное количество шагов за день: " + monthData.maxSteps());
         System.out.println("Среднее количество шагов за месяц: " + (sumSteps / 30));
